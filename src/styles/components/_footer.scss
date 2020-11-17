@@ -1,0 +1,21 @@
+.page-footer {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+
+    .built {
+        .love-sign {
+            color: red;
+        }
+        .bio-link {
+            text-decoration: none;
+            color: $primary-accent-color;
+
+            &:hover {
+                color: $primary-accent-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.form-section {
+    margin-top: 3rem;
+
+    .form {
+        .input {
+            height: 3rem;
+            border-radius: 1.5rem;
+            border: 1px solid $primary-gray;
+            width: 100%;
+            padding: 1rem 1.5rem;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .button {
+            background-color: $primary-accent-color;
+            border-radius: 27px;
+            color: $primary-white;
+        }
+    }
+}

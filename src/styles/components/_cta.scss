@@ -1,0 +1,12 @@
+.signup {
+    margin-right: 0px;
+    padding: 10px 32px;
+    border-radius: 27px;
+    background-color: $primary-accent-color;
+    color: $primary-white;
+    transition: all 0.5s ease;
+    &:hover {
+        text-decoration: none;
+        color: $primary-white;
+    }
+}

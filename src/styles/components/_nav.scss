@@ -1,0 +1,30 @@
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+
+    @media (max-width: $xs-mobile) {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        margin-top: 0.5rem;
+    }
+    .logo {
+        font-weight: 600;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: $primary-black;
+    }
+    .cta {
+        .login {
+            color: $primary-black;
+            background: transparent;
+            margin-right: 1rem;
+        }
+
+        @media (max-width: $xs-mobile) {
+            margin-top: 1rem;
+        }
+    }
+}

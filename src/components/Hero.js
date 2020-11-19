@@ -17,7 +17,6 @@ const Hero = () => {
                 </div>
             </div>
             <InputUrl />
-            <Footer />
         </div>
     );
 };

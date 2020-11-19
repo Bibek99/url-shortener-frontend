@@ -1,21 +1,50 @@
-.page-footer {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 0;
+.footer-info {
+    list-style: none;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.footer-head {
+    font-size: 1.25rem;
+    font-weight: 500;
     margin-bottom: 1rem;
+}
 
-    .built {
-        .love-sign {
-            color: red;
-        }
-        .bio-link {
+.footer-bg {
+    background: $primary-black;
+    color: $primary-white;
+
+    li {
+        color: $primary-white-dark;
+        margin-bottom: 0.5rem;
+    }
+
+    .row {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    a {
+        color: $primary-white-dark;
+        &:hover {
+            color: $primary-white;
             text-decoration: none;
-            color: $primary-accent-color;
+        }
+    }
 
-            &:hover {
-                color: $primary-accent-color;
+    .urlly {
+        .social-media {
+            .icon {
+                color: $primary-white-dark;
+                margin-right: 2rem;
             }
+        }
+    }
+
+    svg {
+        fill: $primary-white-dark;
+        &:hover {
+            fill: $primary-white;
         }
     }
 }

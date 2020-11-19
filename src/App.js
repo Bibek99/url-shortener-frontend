@@ -8,6 +8,7 @@ import Signup from './pages/signup';
 // Including styles
 import './styles/app.scss';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Footer from './components/Footer';
 
 const App = () => {
     return (
@@ -17,6 +18,7 @@ const App = () => {
                 <Route path="/login" component={Login} />
                 <Route path="/signup" component={Signup} />
             </Switch>
+            <Footer />
         </Router>
     );
 };

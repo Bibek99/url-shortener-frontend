@@ -1,6 +1,5 @@
 import React from 'react';
 import InputUrl from './InputUrl';
-import Footer from './Footer';
 
 const Hero = () => {
     return (

@@ -7,13 +7,14 @@
 @import './components/inputUrl';
 @import './components/footer';
 @import './components/features';
+@import './components/clients';
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 
     font-family: 'Poppins', sans-serif;
 }

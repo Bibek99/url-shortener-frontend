@@ -1,15 +1,19 @@
 import React from 'react';
+import { ReactComponent as Linksvg } from '../assets/images/link.svg';
 
 const InputUrl = () => {
     return (
         <div className="form-section container">
             <form className="form">
                 <div className="row">
-                    <input
-                        type="text"
-                        placeholder="Paste your long URL here"
-                        className="input col-12 col-lg-8 mx-auto"
-                    ></input>
+                    <div className="input-div col-12 col-lg-8 mx-auto">
+                        <Linksvg className="link-icon" />
+                        <input
+                            type="text"
+                            placeholder="Paste your long URL here"
+                            className="input"
+                        ></input>
+                    </div>
                 </div>
                 <div className="row">
                     <button

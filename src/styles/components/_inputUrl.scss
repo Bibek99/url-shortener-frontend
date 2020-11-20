@@ -1,13 +1,29 @@
 .form-section {
-    margin-top: 3rem;
+    margin-top: 2rem;
 
     .form {
+        .input-div {
+            border: 2px solid $primary-white-dark;
+            border-radius: 27px;
+            height: 54px;
+            display: flex;
+            align-items: center;
+
+            .link-icon {
+                margin: 0.25rem 0.5rem;
+            }
+
+            &:hover {
+                transition: 0.5s all ease;
+                box-shadow: 0 1px 10px 0 rgba(150, 152, 155, 0.28);
+            }
+        }
+
         .input {
             height: 3rem;
-            border-radius: 1.5rem;
-            border: 1px solid $primary-gray;
             width: 100%;
-            padding: 1rem 1.5rem;
+            padding: 1rem 1rem;
+            border: none;
 
             &:focus {
                 outline: none;

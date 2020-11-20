@@ -1,0 +1,31 @@
+.short-div {
+    margin: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 27px;
+    border: 1px solid $primary-white-dark;
+
+    .copy-icon {
+        margin: 0 0.5rem 0 0.125rem;
+        padding: 0.125rem;
+        fill: $primary-white;
+    }
+
+    .copy {
+        padding: 0.5rem 1rem;
+        border: 1px solid $primary-accent-color;
+        border-radius: 0 27px 27px 0;
+        background-color: $primary-accent-color;
+        color: $primary-white;
+
+        &:hover {
+            text-decoration: none;
+            color: $primary-white;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

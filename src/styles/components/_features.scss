@@ -1,6 +1,11 @@
 .features-bg {
     background: $primary-black;
     color: $primary-white;
+    transform: skewY(-3deg);
+
+    .features-body {
+        transform: skewY(3deg);
+    }
 
     .section-title {
         text-align: center;
@@ -9,6 +14,14 @@
         margin-bottom: 1.5rem;
         padding-top: 5rem;
         padding-right: 0rem;
+
+        @media (max-width: 768px) {
+            font-size: 1.75rem;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 1.5rem;
+        }
     }
 
     .feature {

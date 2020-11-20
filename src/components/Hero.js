@@ -1,5 +1,6 @@
 import React from 'react';
 import InputUrl from './InputUrl';
+import ShortUrl from './ShortUrl';
 
 const Hero = () => {
     return (
@@ -16,6 +17,7 @@ const Hero = () => {
                 </div>
             </div>
             <InputUrl />
+            <ShortUrl />
         </div>
     );
 };

@@ -1,7 +1,6 @@
 const axios = require('axios').default;
 
 export const shorten = async (longUrl) => {
-    console.log(longUrl);
     let data = await axios({
         method: 'post',
         url: '/api/url/shorten',

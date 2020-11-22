@@ -3,7 +3,7 @@ import CTA from './CTA';
 
 const Unlock = () => {
     return (
-        <div className="unlock-bg container">
+        <div className="unlock-bg container mx-auto">
             <div className="row">
                 <div className="unlock-text col-12 col-md-10 col-lg-7 mx-auto">
                     Unlock more of our features and montior your links with on

@@ -14,10 +14,6 @@ const InputUrl = () => {
         shortUrl: '',
     });
     const { longUrl, error, loading, generated, shortUrl } = values;
-    console.log('loading:', loading);
-    console.log('error:', error);
-    console.log('generated:', generated);
-    console.log('shortUrl:', shortUrl);
 
     const handleChange = (name) => (event) => {
         setValues({
@@ -35,9 +31,7 @@ const InputUrl = () => {
             error: false,
             loading: true,
         });
-        console.log('loading:', loading);
         shorten({ longUrl }).then(({ data }) => {
-            console.log(data);
             if (data.error) {
                 setValues({
                     ...values,
@@ -93,7 +87,7 @@ const InputUrl = () => {
     const Error = () => {
         return (
             <div
-                className="error alert alert-danger col-6 mx-auto my-4"
+                className="error alert alert-danger col-10 col-md-6 mx-auto my-4"
                 style={{ display: error ? '' : 'none' }}
             >
                 {error}
@@ -104,7 +98,7 @@ const InputUrl = () => {
     const Loading = () => {
         return (
             <div
-                className="loading alert alert-info col-6 mx-auto my-4"
+                className="loading alert alert-info col-10 col-md-6 mx-auto my-4"
                 style={{ display: loading ? '' : 'none' }}
             >
                 Loading...

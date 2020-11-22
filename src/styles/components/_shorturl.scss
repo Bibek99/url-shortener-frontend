@@ -16,6 +16,10 @@
             top: 50%;
             padding-left: 1rem;
             transform: translateY(-50%);
+
+            @media (max-width: 576px) {
+                font-size: 0.9375rem;
+            }
         }
 
         .copy {

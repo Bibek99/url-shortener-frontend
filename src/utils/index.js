@@ -6,6 +6,7 @@ export const shorten = async (longUrl) => {
         url: 'https://url-b.herokuapp.com/api/url/shorten',
         data: JSON.stringify(longUrl),
         headers: {
+            'Access-Control-Allow-Origin': '*',
             'Content-Type': 'application/json',
         },
     })

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const CTA = (props) => {
     return (
-        <Link to="/signup" className="signup">
+        <Link to="/" className="signup">
             {props.name}
         </Link>
     );

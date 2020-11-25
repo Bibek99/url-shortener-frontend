@@ -12,7 +12,7 @@ const Nav = () => {
                     </Link>
                 </div>
                 <ul className="cta">
-                    <Link to="/login" className="btn login">
+                    <Link to="/" className="btn login">
                         Login
                     </Link>
                     <CTA name="Get Started" />

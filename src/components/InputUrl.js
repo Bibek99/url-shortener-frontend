@@ -26,29 +26,37 @@ const InputUrl = () => {
 
     const shortenUrl = (event) => {
         event.preventDefault();
-        setValues({
-            ...values,
-            error: false,
-            loading: true,
-        });
-        shorten({ longUrl }).then(({ data }) => {
-            if (data.error) {
-                setValues({
-                    ...values,
-                    error: data.error,
-                    loading: false,
-                    generated: false,
-                });
-            } else {
-                setValues({
-                    ...values,
-                    error: '',
-                    loading: false,
-                    generated: true,
-                    shortUrl: data.shortUrl,
-                });
-            }
-        });
+        if (longUrl === '') {
+            setValues({
+                ...values,
+                error: 'Please enter an URL',
+                loading: false,
+            });
+        } else {
+            setValues({
+                ...values,
+                error: false,
+                loading: true,
+            });
+            shorten({ longUrl }).then(({ data }) => {
+                if (data.error) {
+                    setValues({
+                        ...values,
+                        error: data.error,
+                        loading: false,
+                        generated: false,
+                    });
+                } else {
+                    setValues({
+                        ...values,
+                        error: '',
+                        loading: false,
+                        generated: true,
+                        shortUrl: data.shortUrl,
+                    });
+                }
+            });
+        }
     };
 
     const Shorturl = () => {
@@ -123,6 +131,7 @@ const InputUrl = () => {
                         </div>
                     </div>
                     {Error()}
+                    {Loading()}
                     <div className="row">
                         <button
                             onClick={shortenUrl}
@@ -134,7 +143,6 @@ const InputUrl = () => {
                     </div>
                 </form>
             </div>
-            {Loading()}
             {Shorturl()}
         </>
     );

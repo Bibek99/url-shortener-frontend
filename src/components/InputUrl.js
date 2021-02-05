@@ -4,6 +4,7 @@ import { shorten } from '../utils';
 import { store } from 'react-notifications-component';
 import { ReactComponent as Copy } from '../assets/images/copy.svg';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import {isUri} from 'valid-url';
 
 const InputUrl = () => {
     const [values, setValues] = useState({
@@ -33,29 +34,38 @@ const InputUrl = () => {
                 loading: false,
             });
         } else {
-            setValues({
-                ...values,
-                error: false,
-                loading: true,
-            });
-            shorten({ longUrl }).then(({ data }) => {
-                if (data.error) {
+            if (!isUri(longUrl)) {
                     setValues({
-                        ...values,
-                        error: data.error,
-                        loading: false,
-                        generated: false,
-                    });
-                } else {
-                    setValues({
-                        ...values,
-                        error: '',
-                        loading: false,
-                        generated: true,
-                        shortUrl: data.shortUrl,
-                    });
-                }
-            });
+                    ...values,
+                    error: 'Please enter a valid URL',
+                    loading: false,
+                });
+            }
+            else {
+                setValues({
+                    ...values,
+                    error: false,
+                    loading: true,
+                });
+                shorten({ longUrl }).then(({ data }) => {
+                    if (data.error) {
+                        setValues({
+                            ...values,
+                            error: data.error,
+                            loading: false,
+                            generated: false,
+                        });
+                    } else {
+                        setValues({
+                            ...values,
+                            error: '',
+                            loading: false,
+                            generated: true,
+                            shortUrl: data.shortUrl,
+                        });
+                    }
+                });
+            }
         }
     };
 
